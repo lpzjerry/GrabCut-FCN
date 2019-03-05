@@ -15,3 +15,8 @@ Improve the performance of traditional semi-automatic image segmentation algorit
   - A: [GrabCut](https://docs.opencv.org/3.4/d8/d83/tutorial_py_grabcut.html)
   - B: [Binary Segmentation](https://github.com/TejasNaikk/Binary-Segmentation)
   - C: [FCN](https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf)
+
+### Important Dates
+- **03/08/2019**: Proposal deadline
+- **04/16/2019**: Project presentation
+- **04/27/2019**: Final report submission
