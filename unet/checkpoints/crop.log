@@ -1,0 +1,148 @@
+    Starting training:
+        Epochs: 5
+        Batch size: 10
+        Learning rate: 0.1
+        Training size: 230
+        Validation size: 12
+        Checkpoints: True
+        CUDA: False
+    
+Starting epoch 1/5.
+/home/jerry/anaconda3/lib/python3.6/site-packages/torch/nn/modules/upsampling.py:122: UserWarning: nn.Upsampling is deprecated. Use nn.functional.interpolate instead.
+  warnings.warn("nn.Upsampling is deprecated. Use nn.functional.interpolate instead.")
+/home/jerry/anaconda3/lib/python3.6/site-packages/torch/nn/functional.py:1006: UserWarning: nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.
+  warnings.warn("nn.functional.sigmoid is deprecated. Use torch.sigmoid instead.")
+0.0000 --- loss: 0.701541
+0.0435 --- loss: 0.676843
+0.0870 --- loss: 0.651138
+0.1304 --- loss: 0.801732
+0.1739 --- loss: 0.676169
+0.2174 --- loss: 0.678644
+0.2609 --- loss: 0.718413
+0.3043 --- loss: 0.677872
+0.3478 --- loss: 0.692533
+0.3913 --- loss: 0.698903
+0.4348 --- loss: 0.679506
+0.4783 --- loss: 0.702615
+0.5217 --- loss: 0.672922
+0.5652 --- loss: 0.702942
+0.6087 --- loss: 0.690242
+0.6522 --- loss: 0.683485
+0.6957 --- loss: 0.672676
+0.7391 --- loss: 0.663141
+0.7826 --- loss: 0.680635
+0.8261 --- loss: 0.748393
+0.8696 --- loss: 0.684782
+0.9130 --- loss: 0.654895
+0.9565 --- loss: 0.722015
+Epoch finished ! Loss: 0.724183507940986
+Validation Dice Coeff: 0.3103189142070203
+Checkpoint 1 saved !
+Starting epoch 2/5.
+0.0000 --- loss: 0.652432
+0.0435 --- loss: 0.667418
+0.0870 --- loss: 0.659629
+0.1304 --- loss: 0.710340
+0.1739 --- loss: 0.641276
+0.2174 --- loss: 0.649598
+0.2609 --- loss: 0.709114
+0.3043 --- loss: 0.636735
+0.3478 --- loss: 0.654325
+0.3913 --- loss: 0.669724
+0.4348 --- loss: 0.601481
+0.4783 --- loss: 0.670696
+0.5217 --- loss: 0.604918
+0.5652 --- loss: 0.672432
+0.6087 --- loss: 0.622389
+0.6522 --- loss: 0.683908
+0.6957 --- loss: 0.646343
+0.7391 --- loss: 0.662502
+0.7826 --- loss: 0.650736
+0.8261 --- loss: 0.687729
+0.8696 --- loss: 0.627855
+0.9130 --- loss: 0.590909
+0.9565 --- loss: 0.625979
+Epoch finished ! Loss: 0.6817486123605208
+Validation Dice Coeff: 0.6299870611953282
+Checkpoint 2 saved !
+Starting epoch 3/5.                                                                                                                                                                                                                                                        [52/479]
+0.0000 --- loss: 0.670504
+0.0435 --- loss: 0.627861
+0.0870 --- loss: 0.591750
+0.1304 --- loss: 0.686352
+0.1739 --- loss: 0.598143
+0.2174 --- loss: 0.695197
+0.2609 --- loss: 0.674822
+0.3043 --- loss: 0.630856
+0.3478 --- loss: 0.631127
+0.3913 --- loss: 0.642386
+0.4348 --- loss: 0.577355
+0.4783 --- loss: 0.651456
+0.5217 --- loss: 0.605280
+0.5652 --- loss: 0.638525
+0.6087 --- loss: 0.608833
+0.6522 --- loss: 0.680232
+0.6957 --- loss: 0.620875
+0.7391 --- loss: 0.603204
+0.7826 --- loss: 0.614022
+0.8261 --- loss: 0.677314
+0.8696 --- loss: 0.613419
+0.9130 --- loss: 0.591744
+0.9565 --- loss: 0.620892
+Epoch finished ! Loss: 0.6614613722671162
+Validation Dice Coeff: 0.4454872464517152
+Checkpoint 3 saved !
+Starting epoch 4/5.
+0.0000 --- loss: 0.629641
+0.0435 --- loss: 0.620086
+0.0870 --- loss: 0.577787
+0.1304 --- loss: 0.639718
+0.1739 --- loss: 0.608919
+0.2174 --- loss: 0.605653
+0.2609 --- loss: 0.689072
+0.3043 --- loss: 0.652389
+0.3478 --- loss: 0.650981
+0.3913 --- loss: 0.629367
+0.4348 --- loss: 0.581012
+0.4783 --- loss: 0.649573
+0.5217 --- loss: 0.608743
+0.5652 --- loss: 0.642251
+0.6087 --- loss: 0.578077
+0.6522 --- loss: 0.676517
+0.6957 --- loss: 0.603218
+0.7391 --- loss: 0.606624
+0.7826 --- loss: 0.596892
+0.8261 --- loss: 0.646781
+0.8696 --- loss: 0.599391
+0.9130 --- loss: 0.606199
+0.9565 --- loss: 0.618413
+Epoch finished ! Loss: 0.6507865678180348
+Validation Dice Coeff: 0.558064917984448
+Checkpoint 4 saved !
+Starting epoch 5/5.
+0.0000 --- loss: 0.627957
+0.0435 --- loss: 0.613176
+0.0870 --- loss: 0.597693
+0.1304 --- loss: 0.633563
+0.1739 --- loss: 0.589814
+0.2174 --- loss: 0.627625
+0.2609 --- loss: 0.654683
+0.3043 --- loss: 0.586545
+0.3478 --- loss: 0.614251
+0.3913 --- loss: 0.605398
+0.4348 --- loss: 0.576828
+0.4783 --- loss: 0.611276
+0.5217 --- loss: 0.572261
+0.5652 --- loss: 0.636470
+0.6087 --- loss: 0.594159
+0.6522 --- loss: 0.597111
+0.6957 --- loss: 0.631548
+0.7391 --- loss: 0.593343
+0.7826 --- loss: 0.603435
+0.8261 --- loss: 0.606728
+0.8696 --- loss: 0.584690
+0.9130 --- loss: 0.612680
+0.9565 --- loss: 0.629020
+Epoch finished ! Loss: 0.6363753297112205
+Validation Dice Coeff: 0.4790107322125389
+Checkpoint 5 saved !
