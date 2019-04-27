@@ -22,5 +22,5 @@ Improve the performance of traditional semi-automatic image segmentation algorit
 
 ### Important Dates
 - **03/08/2019**: Proposal deadline
-- **04/16/2019**: Project presentation
+- ~~**04/16/2019**: Project presentation~~
 - **04/27/2019**: Final report submission
