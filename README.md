@@ -1,4 +1,4 @@
-# GrabCut-UNet
+# GrabCut-FCN
 Improve the performance of traditional semi-automatic image segmentation algorithms (e.g. GrabCut) with [U-Net](https://arxiv.org/pdf/1505.04597.pdf).
 - *This project serves as the final project for the course **[CS4186 Computer Vision and Image Processing](https://www.cityu.edu.hk/catalogue/ug/201819/course/CS4186.htm)** offered by [Prof. NGO Chong Wah](http://www.cs.cityu.edu.hk/~cwngo/).*
 
