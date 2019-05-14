@@ -113,5 +113,55 @@ b’ = 1-r’-g’, which can be ignored in representation
     - **Contrast**: Measures the local variations. (favors contribution of N(I,j) away from the diagonal.
     - **Homogeneity**: large if big value are on the diagonal (Contrast <-> Homogeneity)
     - **Correlation**: Measures the joint probability occurrence of the specified pixel pairs or how correlated a reference pixel to its neighbors
-
  
+## 5. Corner (Chapter 4.1)
+- Motivation: panorama stitching: extract features, match features, align images.
+- **Invariant local features**: invariant to (geometric, photometric) invariance.
+    - Locality, Quantity, Distinctiveness, Efficiency
+- Approaches
+    - **Detection**: Identify the interest points
+    - **Description**: Extract vector feature descriptor
+    - **Matching**
+    - (Tracking)
+#### Harris corner detection
+- Shifting the window $W$ by $(u,v)$:
+    - Sum of Square Difference (SSD error). Assume the offset $(u,v)$ is small.
+    - Taylor Series expansion of I: ![](https://i.imgur.com/86sJ5hu.png)
+    - $\Rightarrow E(u,v) \approx \Sigma_{(x,y)\in W}[I_{x}u+I_{y}v]^{2}$
+    - where $I_{x}$ is the derivative in x direction
+- $E(x,y) \approx Au^{2} + 2Buv + Cv^{2}$
+    - $A = \Sigma I_{x}^{2}$
+    - $B = \Sigma I_{x}I_{y}$
+    - $C = \Sigma I_{y}^{2}$
+    - ![](https://i.imgur.com/Qlmi33u.png)
+- math
+    - $Hx = \lambda x, Ax = \lambda x$
+    - $X_{max}$: the direction that gives you the largest change (SSD difference)
+    - $\lambda_{max}$: if you move via $X_{max}$, the amount of increase.
+- intuition
+    - Doing matrix decomposition, we will get the 4 values.
+    - To detect the corners, we need **a large ${\lambda_{min}}$ value**.
+    - Edge: large $\lambda_{max}$, small $\lambda_{min}$. Flat: both small
+- Algorithm
+    1. Compute the gradient at each point in the image
+    2. Create the H matrix from the entries in the gradient
+    3. Compute the eigenvalues. 
+    4. Find points with large response ($\lambda_{min}$ > threshold)
+    5. Choose those points where $\lambda_{min}$ is a local maximum as features (NMS)
+- or a more simple version
+    1. Edge detection
+    2. Harris matrix decomposition (slow)
+    3. Calc $\lambda$, select local maximum $\lambda_{min
+- To simplify matrix decomposition:
+    - Harris Corner Detector / Harris operator
+    - $f = \frac{\lambda_{1}\lambda_{2}}{\lambda_{1}+\lambda_{2}} = \frac{determinant(H)}{trace(H)} \approx \lambda_{min}$ 
+    - $trace(H) = h_{11} + h_{22}$
+- In practice, also:
+    - Weighting derivatives by its distance from the central pixel
+    - ![](https://i.imgur.com/K7lnGL9.png)
+- Finally, we get:
+    1. Image derivatives (optionally, blur first)
+    2. Square of derivatives ($I_{x}^{2}, I_{y}^{2}, I_{x}I_{y}$)
+    3. Gaussian filter over suqres ($g(\sigma)$)
+    4. Cornerness function: both eigenvalues $\lambda$ are strong
+    5. NMS
